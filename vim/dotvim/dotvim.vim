@@ -16,7 +16,7 @@ if has("user_commands")
     let colors_solarized=0
     if !filereadable('~/.vim/bundle/vim-colors-solarized')
       echo "vim-colors-solarized"
-      silent !git clone git://github.com/altercation/vim-colors-solarized.git vim-colors-solarized
+      silent !git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
       let colors_solarized=1
     endif
     echo ""
