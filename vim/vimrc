@@ -42,3 +42,8 @@ set number
 set scrolloff=3
 set ttimeoutlen=10
 map <leader>r :so $MYVIMRC
+set ts=4
+set sw=2
+" ignore these files when completing names in the explorer
+set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.pyc,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
+set autoread
