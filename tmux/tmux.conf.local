@@ -1,0 +1,12 @@
+set -g status-left "#[fg=green]Session: #S #[fg=yellow]W#I #[fg=green]P#P #(pane_size)"
+
+# splits should start in the same directory as the pane being split from
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+set -g status-right " #[fg=green]#(wemux_user_list) #[fg=yellow]%R"
+
+set -g status-interval 3
+
+bind s set -g status off
+bind S set -g status on

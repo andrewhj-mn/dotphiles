@@ -13,16 +13,32 @@ source ~/.vim/dotvim.vim
 if has("user_commands")
   set nocompatible
   filetype off
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-  "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
-  let g:vundles=['general', 'programming']
-  let g:neocomplcache_enable_at_startup = 1
-  " Load 'vundles'
-  source ~/.vim/vundles.vim
-  " Add extra bundles here...
-  " Bundle 'reponame'
+"   set rtp+=~/.vim/bundle/vundle/
+"   call vundle#rc()
+"   "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
+"   let g:vundles=['general', 'programming']
+"   let g:neocomplcache_enable_at_startup = 1
+"   " Load 'vundles'
+"   source ~/.vim/vundles.vim
+"   " Add extra bundles here...
+"   " Bundle 'reponame'
 endif
 
 " Customize to your needs...
-
+execute pathogen#infect()
+syntax on
+if has('gui_running')
+    set background=light
+    let g:airline_solarized_bg='light'
+else
+    set background=dark
+    let g:airline_solarized_bg='dark'
+endif
+" let g:solarized_termcolors=256
+let g:airline_theme='solarized'
+colorscheme solarized
+filetype plugin indent on
+set number
+set scrolloff=3
+set ttimeoutlen=10
+map <leader>r :so $MYVIMRC
