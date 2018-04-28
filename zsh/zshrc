@@ -25,4 +25,4 @@ alias gg+='git log --oneline --abbrev-commit --all --graph --decorate --color'
 alias gg='gg+ | head -n `expr $LINES / 2`'
 alias gs='git status -bs'
 alias bx='bundle exec'
-
+alias fig='docker-compose'
