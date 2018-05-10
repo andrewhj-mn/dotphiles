@@ -81,6 +81,7 @@ zsh/zshrc
 [hosts]
 S8-C02VQ6HPHTD6			 git=ANY
 S8-F5KPN0BHF9VM			 git=ANY
+s8-f5kpn0bhf9vm			 git=ANY
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
