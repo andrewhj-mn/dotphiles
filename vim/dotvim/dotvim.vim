@@ -19,6 +19,26 @@ if has("user_commands")
       silent !git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
       let colors_solarized=1
     endif
+    " might want to add the other plugins that have been added
+    " current list: 
+    " * alchemist.vim
+    " * asyncrun.vim
+    " * editorconfig-vim
+    " * neomake
+    " * prettier
+    " * vim-airline
+    " * vim-colors-solarized
+    " * vim-polyglot
+    " * vim-vue
+    " * ale
+    " * deoplete.nvim
+    " * emmet-vim
+    " * nerdtree
+    " * rust.vim
+    " * vim-airline-themes
+    " * vim-gitgutter
+    " * vim-surround
+
     echo ""
     let PathgenInstalled=1
   endif
