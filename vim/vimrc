@@ -42,8 +42,25 @@ set number
 set scrolloff=3
 set ttimeoutlen=10
 map <leader>r :so $MYVIMRC
-set ts=4
-set sw=2
+set tabstop=4 
+set softtabstop=4
+set expandtab
+set shiftwidth=4
+set smarttab
+let g:user_emmet_leader_key = '<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends': 'jsx',
+    \  },
+  \}
+
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+"
 " ignore these files when completing names in the explorer
 set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.pyc,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 set autoread
+
+" autocommand to invoke prettify
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %

@@ -10,6 +10,8 @@ antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-se
 antigen theme agnoster
 antigen apply
 
+ZSH_THEME="agnoster"
+
 # Setup zsh-autosuggestions
 source $HOME/.zsh-autosuggestions/autosuggestions.zsh
 
@@ -24,5 +26,17 @@ alias st='git status'
 alias gg+='git log --oneline --abbrev-commit --all --graph --decorate --color'
 alias gg='gg+ | head -n `expr $LINES / 2`'
 alias gs='git status -bs'
+alias gpff='git pull --ff-only'
 alias bx='bundle exec'
 alias fig='docker-compose'
+alias vim='nvim'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+eval "$(direnv hook zsh)"
+set -o vi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
