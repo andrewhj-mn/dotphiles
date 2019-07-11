@@ -29,6 +29,11 @@ if has("user_commands")
     " * vim-airline
     " * vim-colors-solarized
     " * vim-polyglot
+    if !filereadable('~/.vim/bundle/vim-polyglot')
+      echo "vim-polyglot"
+      silent !git clone git://github.com/sheerun/vim-polyglot.git ~/.vim/bundle/vim-polyglot
+      let polyglot_installed=1
+    endif
     " * vim-vue
     " * ale
     " * deoplete.nvim
